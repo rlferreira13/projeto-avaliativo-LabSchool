@@ -1,14 +1,24 @@
 package src.comLabSchool;
 
+import java.text.SimpleDateFormat;
+
 public abstract class Pessoa{
     protected String Nome;
     protected String Telefone;
     protected String DatadeNascimento;
     protected String CPF;
-    protected String Codigo;
+    protected int Codigo;
 
     public String getNome() {
         return Nome;
+    }
+
+    public Pessoa(String nome, String telefone, String datadeNascimento, String cpf, int codigo) {
+        Nome = nome;
+        Telefone = telefone;
+        DatadeNascimento = datadeNascimento;
+        CPF = cpf;
+        Codigo = codigo;
     }
 
     public void setNome(String nome) {
@@ -28,6 +38,7 @@ public abstract class Pessoa{
     }
 
     public void setDatadeNascimento(String datadeNascimento) {
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         DatadeNascimento = datadeNascimento;
     }
 
@@ -39,11 +50,11 @@ public abstract class Pessoa{
         this.CPF = CPF;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return Codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         Codigo = codigo;
     }
 }
