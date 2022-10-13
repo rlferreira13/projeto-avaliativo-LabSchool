@@ -1,7 +1,12 @@
 package src.comLabSchool;
+
+import repository.BancoDeDados;
+
 import java.util.Scanner;
+
 public class Menu {
     public static void MenuPrincipal() {
+        BancoDeDados banco = new BancoDeDados();
         int opcao = 0;
         Scanner scanner = new Scanner(System.in);
         while (opcao != 7) {
@@ -15,7 +20,7 @@ public class Menu {
                     "6 - Relatórios e Listagens\n" +
                     "7 - Sair");
             opcao = scanner.nextInt();
-            if (opcao == 1) CadastroAluno.NovoCadastro();
+            if (opcao == 1) CadastroAluno.NovoCadastro(banco);
             if (opcao == 2) CadastroPedagogo.NovoCadastro();
             if (opcao == 3) CadastroProfessor.NovoCadastro();
             if (opcao == 4) AtualizaMatricula.Atualizar();

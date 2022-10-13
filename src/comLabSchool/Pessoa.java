@@ -2,7 +2,7 @@ package src.comLabSchool;
 
 import java.text.SimpleDateFormat;
 
-public abstract class Pessoa{
+public abstract class Pessoa {
     protected String Nome;
     protected String Telefone;
     protected String DatadeNascimento;
