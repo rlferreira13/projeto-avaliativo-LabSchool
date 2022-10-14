@@ -1,4 +1,4 @@
-package src.comLabSchool;
+package src.com.LabSchool;
 
 public class Aluno extends Pessoa {
     private String SituacaodaMatricula;
@@ -44,7 +44,7 @@ public class Aluno extends Pessoa {
     }
 
     public Aluno(String nome, String telefone, String datadeNascimento, String cpf, int codigo,
-                 String situacaodaMatricula, Double nota, Integer totaldeAtendimentosPedagogicos) {
+                 String situacaodaMatricula, Double nota, int totaldeAtendimentosPedagogicos) {
         super(nome, telefone, datadeNascimento, cpf, codigo);
         SituacaodaMatricula = situacaodaMatricula;
         Nota = nota;

@@ -1,6 +1,6 @@
-package src.comLabSchool;
+package src.com.LabSchool;
 
-import repository.BancoDeDados;
+import src.com.LabSchool.repository.BancoDeDados;
 
 import java.util.Scanner;
 
@@ -18,26 +18,14 @@ public class CadastroAluno {
         System.out.println("Informe a nota do processo seletivo:");
         Double notaAluno = scanner.nextDouble();
         int AtendimentosPedagogicos = 0;
-        int idAluno = 1;
+        int idAluno = banco.geradordeId();
         System.out.println("Informe a situação da matrícula:\n" +
                 "Digite 1 para Ativo \n" +
                 "Digite 2 para Irregular \n" +
                 "Digite 3 para Atendimento pedagógico\n" +
                 "Digite 4 para Inativo");
-        String SituacaoMatricula = "";
-        int opcao = scanner.nextInt();
-        if (opcao == 1) {
-            SituacaoMatricula = "Ativo";
-        }
-        if (opcao == 2) {
-            SituacaoMatricula = "Irregular";
-        }
-        if (opcao == 3) {
-            SituacaoMatricula = "Atendimento pedagógico";
-        }
-        if (opcao == 4) {
-            SituacaoMatricula = "Inativo";
-        }
+        String SituacaoMatricula = AtualizaMatricula.atualizacaomatricula();
+
         Aluno aluno = new Aluno(nomeAluno,
                 telefoneAluno,
                 dataNascimentoAluno,
@@ -47,6 +35,6 @@ public class CadastroAluno {
                 notaAluno,
                 AtendimentosPedagogicos);
         banco.addAluno(aluno);
-        System.out.println(banco.toString());
+        System.out.println(banco.getListaGeral().toString());
     }
 }
