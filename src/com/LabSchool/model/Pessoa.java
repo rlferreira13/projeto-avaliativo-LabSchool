@@ -1,4 +1,4 @@
-package src.com.LabSchool;
+package src.com.LabSchool.model;
 import java.text.SimpleDateFormat;
 
 public abstract class Pessoa {

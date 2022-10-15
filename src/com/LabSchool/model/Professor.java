@@ -1,6 +1,8 @@
-package src.com.LabSchool;
+package src.com.LabSchool.model;
 
-public class Professor extends Pessoa{
+import src.com.LabSchool.model.Pessoa;
+
+public class Professor extends Pessoa {
     private String FormacaoAcademica;
     private String ExperienciaDev;
     private String Estado;

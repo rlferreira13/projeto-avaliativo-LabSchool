@@ -1,4 +1,4 @@
-package src.com.LabSchool;
+package src.com.LabSchool.model;
 
 public class Aluno extends Pessoa {
     private String SituacaodaMatricula;

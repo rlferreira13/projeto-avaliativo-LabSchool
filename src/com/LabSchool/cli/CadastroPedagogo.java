@@ -1,5 +1,6 @@
-package src.com.LabSchool;
+package src.com.LabSchool.cli;
 
+import src.com.LabSchool.model.Pedagogo;
 import src.com.LabSchool.repository.BancoDeDados;
 
 import java.util.Scanner;

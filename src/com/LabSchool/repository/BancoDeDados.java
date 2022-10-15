@@ -1,12 +1,12 @@
 package src.com.LabSchool.repository;
-import src.com.LabSchool.Aluno;
-import src.com.LabSchool.Pedagogo;
-import src.com.LabSchool.Professor;
+import src.com.LabSchool.model.Aluno;
+import src.com.LabSchool.model.Pedagogo;
+import src.com.LabSchool.model.Professor;
 
 import java.util.ArrayList;
 public class BancoDeDados {
     ArrayList<Aluno>ListaAluno = new ArrayList<>();
-    ArrayList <Professor>ListaProfessor = new ArrayList<>();
+    ArrayList<Professor>ListaProfessor = new ArrayList<>();
     ArrayList <Pedagogo>ListaPedagogo = new ArrayList<>();
 
     public void addPedagogo(Pedagogo pedagogo) {

@@ -1,6 +1,8 @@
-package src.com.LabSchool;
+package src.com.LabSchool.model;
 
-public class Pedagogo extends Pessoa{
+import src.com.LabSchool.model.Pessoa;
+
+public class Pedagogo extends Pessoa {
     private int totalAtendimentosPedagogicos;
 
     @Override
