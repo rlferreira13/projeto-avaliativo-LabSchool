@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class AtualizaMatricula {
 
     public static String atualizacaomatricula() {
+        System.out.println("Informe a situação da matrícula:\n" +
+                "Digite 1 para Ativo \n" +
+                "Digite 2 para Irregular \n" +
+                "Digite 3 para Atendimento pedagógico\n" +
+                "Digite 4 para Inativo");
         String SituacaoMatricula = "";
         Scanner scanner = new Scanner(System.in);
         int opcao = scanner.nextInt();
@@ -22,11 +27,13 @@ public class AtualizaMatricula {
             SituacaoMatricula = "Inativo";
         }
         return SituacaoMatricula;
+
     }
     public static void AtualizaAlunoExistente(BancoDeDados banco){
         Scanner scanner1 = new Scanner(System.in);
-        System.out.println("Informe o nome do aluno:");
-        String aluno = scanner1.nextLine();
-
+        System.out.println("Informe o código do aluno:");
+        int idAluno = scanner1.nextInt();
+        Aluno aluno = banco.getAluno(idAluno);
+        aluno.setSituacaodaMatricula(atualizacaomatricula());
         }
     }

@@ -18,12 +18,7 @@ public class CadastroAluno {
         System.out.println("Informe a nota do processo seletivo:");
         Double notaAluno = scanner.nextDouble();
         int AtendimentosPedagogicos = 0;
-        int idAluno = banco.geradordeId();
-        System.out.println("Informe a situação da matrícula:\n" +
-                "Digite 1 para Ativo \n" +
-                "Digite 2 para Irregular \n" +
-                "Digite 3 para Atendimento pedagógico\n" +
-                "Digite 4 para Inativo");
+        int idAluno = banco.geradordeIdAluno();
         String SituacaoMatricula = AtualizaMatricula.atualizacaomatricula();
 
         Aluno aluno = new Aluno(nomeAluno,
@@ -35,6 +30,7 @@ public class CadastroAluno {
                 notaAluno,
                 AtendimentosPedagogicos);
         banco.addAluno(aluno);
-        System.out.println(banco.getListaGeral().toString());
+        System.out.println(banco.getListaAluno().toString());
+
     }
 }

@@ -18,7 +18,7 @@ public class CadastroProfessor {
         String dataNascimentoProfessor = scanner.nextLine();
         System.out.println("Informe o CPF:");
         String cpfProfessor = scanner.nextLine();
-        int idProfessor = banco.geradordeId();
+        int idProfessor = banco.geradordeIdProfessor();
         System.out.println("Informe a formação acadêmica:\n" +
                 "Digite 1 para Graduação incompleta \n" +
                 "Digite 2 para Graduação completa \n" +
@@ -70,6 +70,6 @@ public class CadastroProfessor {
                 experienciaemDev,
                 estado);
         banco.addProfessor(professor);
-        System.out.println(banco.getListaGeral().toString());
+        System.out.println(banco.getListaProfessor().toString());
     }
 }

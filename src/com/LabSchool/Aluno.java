@@ -39,8 +39,8 @@ public class Aluno extends Pessoa {
         return TotaldeAtendimentosPedagogicos;
     }
 
-    public void setTotaldeAtendimentosPedagogicos(Integer totaldeAtendimentosPedagogicos) {
-        TotaldeAtendimentosPedagogicos = totaldeAtendimentosPedagogicos;
+    public void setTotaldeAtendimentosPedagogicos() {
+        TotaldeAtendimentosPedagogicos++;
     }
 
     public Aluno(String nome, String telefone, String datadeNascimento, String cpf, int codigo,

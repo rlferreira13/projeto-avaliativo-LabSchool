@@ -19,10 +19,10 @@ public class Menu {
                     "7 - Sair");
             opcao = scanner.nextInt();
             if (opcao == 1) CadastroAluno.NovoCadastro(banco);
-            if (opcao == 2) CadastroPedagogo.NovoCadastro();
+            if (opcao == 2) CadastroPedagogo.NovoCadastro(banco);
             if (opcao == 3) CadastroProfessor.NovoCadastro(banco);
             if (opcao == 4) AtualizaMatricula.AtualizaAlunoExistente(banco);
-            if (opcao == 5) AtendimentoPedagogico.NovoAtendimento();
+            if (opcao == 5) AtendimentoPedagogico.NovoAtendimento(banco);
             if (opcao == 6) RelatorioseListagens.SelecionarOpcao();
         }
     }
