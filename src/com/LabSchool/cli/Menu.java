@@ -1,7 +1,5 @@
 package src.com.LabSchool.cli;
-
 import src.com.LabSchool.repository.BancoDeDados;
-
 import java.util.Scanner;
 
 public class Menu {
@@ -17,15 +15,15 @@ public class Menu {
                     "3 - Cadastro de Professor\n" +
                     "4 - Atualizar Situação da Matrícula\n" +
                     "5 - Novo atendimento Pegagógico\n" +
-                    "6 - Relatórios e Listagens\n" + "7 - Sair");
+                    "6 - Relatórios e Listagens\n" +
+                    "7 - Sair");
             opcao = scanner.nextInt();
             if (opcao == 1) CadastroAluno.NovoCadastro(banco);
             if (opcao == 2) CadastroPedagogo.NovoCadastro(banco);
             if (opcao == 3) CadastroProfessor.NovoCadastro(banco);
             if (opcao == 4) AtualizaMatricula.AtualizaAlunoExistente(banco);
             if (opcao == 5) AtendimentoPedagogico.NovoAtendimento(banco);
-            if (opcao == 6) RelatorioseListagens.SelecionarOpcao(banco);
-
+            if (opcao == 6) RelatorioseListagens.SelecionarOpcao();
         }
     }
 }

@@ -1,13 +1,13 @@
 package src.com.LabSchool.model;
 
+import src.com.LabSchool.model.Pessoa;
 
 public class Professor extends Pessoa {
     private String FormacaoAcademica;
     private String ExperienciaDev;
     private String Estado;
 
-    public Professor(String nome, String telefone, String datadeNascimento, String cpf, int codigo,
-                     String formacaoAcademica, String experienciaDev, String estado) {
+    public Professor(String nome, String telefone, String datadeNascimento, String cpf, int codigo, String formacaoAcademica, String experienciaDev, String estado) {
         super(nome, telefone, datadeNascimento, cpf, codigo);
         FormacaoAcademica = formacaoAcademica;
         ExperienciaDev = experienciaDev;
@@ -32,16 +32,23 @@ public class Professor extends Pessoa {
         return FormacaoAcademica;
     }
 
+    public void setFormacaoAcademica(String formacaoAcademica) {
+        FormacaoAcademica = formacaoAcademica;
+    }
+
     public String getExperienciaDev() {
         return ExperienciaDev;
+    }
+
+    public void setExperienciaDev(String experienciaDev) {
+        ExperienciaDev = experienciaDev;
     }
 
     public String getEstado() {
         return Estado;
     }
 
-    @Override
-    public int compareTo(Pessoa o) {
-        return 0;
+    public void setEstado(String estado) {
+        Estado = estado;
     }
 }

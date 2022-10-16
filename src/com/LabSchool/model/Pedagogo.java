@@ -1,5 +1,7 @@
 package src.com.LabSchool.model;
 
+import src.com.LabSchool.model.Pessoa;
+
 public class Pedagogo extends Pessoa {
     private int totalAtendimentosPedagogicos;
 
@@ -14,7 +16,6 @@ public class Pedagogo extends Pessoa {
                 ", Codigo=" + Codigo +
                 '}';
     }
-
     public Pedagogo(String nome, String telefone, String datadeNascimento, String cpf, int codigo, int totalAtendimentosPedagogicos) {
         super(nome, telefone, datadeNascimento, cpf, codigo);
         this.totalAtendimentosPedagogicos = totalAtendimentosPedagogicos;
@@ -23,13 +24,8 @@ public class Pedagogo extends Pessoa {
     public int getTotalAtendimentosPedagogicosEfetuados() {
         return totalAtendimentosPedagogicos;
     }
-
     public void setTotaldeAtendimentosPedagogicosEfetuados() {
-        totalAtendimentosPedagogicos++;
+        totalAtendimentosPedagogicos ++;
     }
 
-    @Override
-    public int compareTo(Pessoa o) {
-        return 0;
-    }
 }
